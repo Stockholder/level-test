@@ -22,7 +22,7 @@ class TbAlternativaAdmin extends Admin
             ->with('Filial')
                 ->add('descricao', 'text')
                 ->add('questao', 'sonata_type_model')   
-                ->add('correta', 'checkbox')
+                ->add('correta', 'checkbox',array('required' => false))
             ->end()
         ;
   }
