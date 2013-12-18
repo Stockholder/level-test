@@ -1,0 +1,31 @@
+Acme\TesteBundle\Entity\TbAlunoAlternativa:
+    type: entity
+    table: tb_aluno_alternativa
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        alternativa:
+            targetEntity: TbAlternativa
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                alternativa_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        aluno:
+            targetEntity: TbAluno
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                aluno_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

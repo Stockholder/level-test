@@ -1,0 +1,17 @@
+Acme\TesteBundle\Entity\TbIdioma:
+    type: entity
+    table: tb_idioma
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        descricao:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }
