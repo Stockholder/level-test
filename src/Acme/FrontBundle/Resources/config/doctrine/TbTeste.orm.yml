@@ -1,0 +1,27 @@
+Acme\FrontBundle\Entity\TbTeste:
+    type: entity
+    table: tb_teste
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        descricao:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+    manyToOne:
+        idioma:
+            targetEntity: TbIdioma
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                idioma_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

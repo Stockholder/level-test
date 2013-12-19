@@ -1,0 +1,31 @@
+Acme\FrontBundle\Entity\TbTesteQuestao:
+    type: entity
+    table: tb_teste_questao
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        questao:
+            targetEntity: TbQuestao
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                questao_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        teste:
+            targetEntity: TbTeste
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                teste_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

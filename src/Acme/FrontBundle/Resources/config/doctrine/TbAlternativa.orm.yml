@@ -1,0 +1,30 @@
+Acme\FrontBundle\Entity\TbAlternativa:
+    type: entity
+    table: tb_alternativa
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        descricao:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+        correta:
+            type: boolean
+            nullable: false
+    manyToOne:
+        questao:
+            targetEntity: TbQuestao
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                questao_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

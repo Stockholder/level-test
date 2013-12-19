@@ -1,3 +1,13 @@
 acme_front_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: AcmeFrontBundle:Default:index }
+
+AcmeFrontBundle:
+    resource: "@AcmeFrontBundle/Controller/"
+    type: annotation
+    prefix: /
+
+tbaluno:
+    resource: "@AcmeFrontBundle/Controller/"
+    type: annotation
+    prefix: /

@@ -1,0 +1,17 @@
+Acme\FrontBundle\Entity\TbAudio:
+    type: entity
+    table: tb_audio
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        path:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

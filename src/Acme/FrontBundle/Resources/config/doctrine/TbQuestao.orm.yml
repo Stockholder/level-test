@@ -1,0 +1,27 @@
+Acme\FrontBundle\Entity\TbQuestao:
+    type: entity
+    table: tb_questao
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        descricao:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+    manyToOne:
+        audio:
+            targetEntity: TbAudio
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                audio_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
